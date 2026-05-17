@@ -1,0 +1,14 @@
+---
+title: "Suazo's First GWAS"
+format: revealjs
+---
+
+## Welcome
+
+This is the Quarto presentation for the **Suazo's First GWAS** project.
+
+## Goals
+
+- Share project context
+- Present analysis highlights
+- Outline next steps
