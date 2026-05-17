@@ -1,5 +1,5 @@
 ---
-title: "Suazo First GWAS"
+title: "Identification of loci associated with serum urate concentration through GWAS"
 format: 
   revealjs:
     transition: slide
@@ -454,15 +454,15 @@ To further understand the biological significance of this gene, we next explored
 
 ## The Family of GLUT9 Ft. Xenopus
 
-Functional studies strongly support the biological relevance of significado in urate metabolism. Although initially classified as a glucose transporter (GLUT9), subsequent experimental evidence demonstrated that its primary physiological role is more closely related to urate transport.
+Functional studies strongly support the biological relevance of *SCLA29* in urate metabolism. Although initially classified as a glucose transporter (*GLUT9*), subsequent experimental evidence demonstrated that its primary physiological role is more closely related to urate transport.
 
-Using Xenopus oocyte expression systems, Augustin et al. (2004) observed that GLUT9 modestly increased deoxyglucose uptake compared with controls, although the transporter showed unusual properties compared with classical glucose transporters, including lack of sensitivity to cytochalasin B.
+Using *Xenopus* oocyte expression systems, Augustin et al. (2004) observed that *GLUT9* modestly increased deoxyglucose uptake compared with controls, although the transporter showed unusual properties compared with classical glucose transporters, including lack of sensitivity to cytochalasin B.
 
-## The Family of SLC2A9 Ft. Xenopus
+## The Family of *SLC2A9* Ft. Xenopus
 
-Later studies clarified this functional ambiguity. Anzai et al. (2008) demonstrated that both SLC2A9 isoforms mediated saturable urate transport in Xenopus oocytes, whereas glucose and fructose transport activity was substantially lower. Transport activity was also influenced by membrane potential and extracellular pH, supporting a specialized physiological transport mechanism. These findings suggested that SLC2A9 functions predominantly as a urate transporter rather than as a conventional sugar transporter.
+Later studies clarified this functional ambiguity. Anzai et al. (2008) demonstrated that both *SLC2A9* isoforms mediated saturable urate transport in Xenopus oocytes, whereas glucose and fructose transport activity was substantially lower. Transport activity was also influenced by membrane potential and extracellular pH, supporting a specialized physiological transport mechanism. These findings suggested that *SLC2A9* functions predominantly as a urate transporter rather than as a conventional sugar transporter.
 
-Together, these studies provide strong mechanistic support linking SLC2A9 with serum urate regulation, hyperuricemia, and gout-related phenotypes identified in GWAS analyses.
+Together, these studies provide strong mechanistic support linking *SLC2A9* with serum urate regulation, hyperuricemia, and gout-related phenotypes identified in GWAS analyses.
 
 ## After checking gnomAD and dbSNP
 
@@ -505,7 +505,7 @@ This pattern is consistent with an additive genetic model and supports the assoc
 
 -   GTEx data showed biologically relevant expression of *SLC2A9* in kidney-, bladder-, and liver-related tissues.
 
-## GCKR Locus Summary
+## *GCKR* Locus Summary
 
 ### Lead SNP
 
@@ -523,7 +523,7 @@ This pattern is consistent with an additive genetic model and supports the assoc
 
 ### Regulatory evidence
 
-```         
+```
 -   RegulomeDB score: 0.55
 
 -   155 regulatory peaks
@@ -535,12 +535,12 @@ This pattern is consistent with an additive genetic model and supports the assoc
 
 ------------------------------------------------------------------------
 
-## GCKR Locus Summary
+## *GCKR* Locus Summary
 
 ### Biological relevance
 
-```         
--   GCKR regulates hepatic glucokinase activity
+```
+-   *GCKR* regulates hepatic glucokinase activity
 
 -   involved in glucose and lipid metabolism
 
@@ -549,15 +549,15 @@ This pattern is consistent with an additive genetic model and supports the assoc
 
 ### GTEx
 
-```         
+```
 -   strong liver expression supports metabolic role
 ```
 
-Together, these findings suggest that the GCKR locus may influence serum urate levels through hepatic metabolic regulation, complementing the direct urate transport mechanism observed for SLC2A9.
+Together, these findings suggest that the *GCKR* locus may influence serum urate levels through hepatic metabolic regulation, complementing the direct urate transport mechanism observed for *SLC2A9*.
 
 ## Concluding Remarks
 
-Variants within GCKR may influence serum urate levels indirectly through alterations in hepatic glucose and lipid metabolism, whereas SLC2A9 appears to contribute more directly through urate transport mechanisms.
+Variants within *GCKR* may influence serum urate levels indirectly through alterations in hepatic glucose and lipid metabolism, whereas *SLC2A9* appears to contribute more directly through urate transport mechanisms.
 
 # References
 
@@ -597,7 +597,7 @@ Kim, G., & Jun, J. (2022). Altered serum uric acid levels in kidney disorders. L
 
 ## 4
 
-Variant Effect Predictor results - Homo_sapiens - GRCh37 Archive browser 115. (s. f.). https://grch37.ensembl.org/Homo_sapiens/Tools/VEP/Results?field1=ID;from=1;operator1=is;size=19;tl=vL6Pt2pjhG0xOP2g-11884347;to=19;value1=rs7375587#Results
+Variant Effect Predictor results - Homo_sapiens - GRCh37 Archive browser 115. (s.f.). https://grch37.ensembl.org/Homo_sapiens/Tools/VEP/Results?field1=ID;from=1;operator1=is;size=19;tl=vL6Pt2pjhG0xOP2g-11884347;to=19;value1=rs7375587#Results
 
 # Credits
 

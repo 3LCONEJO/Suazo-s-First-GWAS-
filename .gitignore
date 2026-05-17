@@ -1,6 +1,9 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
-.gds
-.csv
+*.Rproj.user
+*.Rhistory
+*.RData
+*.Ruserdata
+*.gds
+*.csv
+
+/.quarto/
+**/*.quarto_ipynb
