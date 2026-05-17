@@ -1,0 +1,11 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Suazos GWAS"
+  site-url: "https://github.com/3LCONEJO/Suazo-s-First-GWAS-"
+  
+format:
+  html:
+    theme: default
