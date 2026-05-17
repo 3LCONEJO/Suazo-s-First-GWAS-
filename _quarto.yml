@@ -1,0 +1,7 @@
+project:
+  title: "Suazo's First GWAS"
+
+format:
+  revealjs:
+    theme: simple
+    slide-number: true
