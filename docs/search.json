@@ -369,5 +369,12 @@
     "title": "Identification of loci associated with serum urate concentration through GWAS",
     "section": "4",
     "text": "4\nVariant Effect Predictor results - Homo_sapiens - GRCh37 Archive browser 115. (s.f.). https://grch37.ensembl.org/Homo_sapiens/Tools/VEP/Results?field1=ID;from=1;operator1=is;size=19;tl=vL6Pt2pjhG0xOP2g-11884347;to=19;value1=rs7375587#Results"
+  },
+  {
+    "objectID": "SuazosGWAS.html#post-hoc-snp-call-rate-filtering",
+    "href": "SuazosGWAS.html#post-hoc-snp-call-rate-filtering",
+    "title": "Identification of loci associated with serum urate concentration through GWAS",
+    "section": "Post-hoc SNP Call Rate Filtering",
+    "text": "Post-hoc SNP Call Rate Filtering\n\nSNP call rate filtering was additionally applied after the initial GWAS execution.\n33,750 low-call-rate variants were removed.\nGenomic inflation remained minimal before filtering (\\(\\lambda = 1.003\\)).\nSignificant association signals remained unchanged after filtering.\nFinal analysis retained 380,489 SNPs."
   }
 ]

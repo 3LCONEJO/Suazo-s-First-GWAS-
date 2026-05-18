@@ -322,6 +322,19 @@ An interaction term between BMI and physical activity was additionally incorpora
 estimates_plot
 ```
 
+## Post-hoc SNP Call Rate Filtering
+
+-   SNP call rate filtering was additionally applied after the initial GWAS execution.
+
+
+-   33,750 low-call-rate variants were removed.
+
+-   Genomic inflation remained minimal before filtering ($\lambda = 1.003$).
+
+-   Significant association signals remained unchanged after filtering.
+
+-   Final analysis retained 380,489 SNPs.
+
 ## Finding Our Variants (Manhattan Plot)
 
 ```{r}
@@ -523,7 +536,7 @@ This pattern is consistent with an additive genetic model and supports the assoc
 
 ### Regulatory evidence
 
-```
+```         
 -   RegulomeDB score: 0.55
 
 -   155 regulatory peaks
@@ -539,7 +552,7 @@ This pattern is consistent with an additive genetic model and supports the assoc
 
 ### Biological relevance
 
-```
+```         
 -   *GCKR* regulates hepatic glucokinase activity
 
 -   involved in glucose and lipid metabolism
@@ -549,7 +562,7 @@ This pattern is consistent with an additive genetic model and supports the assoc
 
 ### GTEx
 
-```
+```         
 -   strong liver expression supports metabolic role
 ```
 

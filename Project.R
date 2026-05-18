@@ -59,6 +59,37 @@ colnames(genoMap)<-c("chr", "SNP", "gen.dist", "position", "A1", "A2")
 snpsum.col <- col.summary(genotype)
 head(snpsum.col)
 
+
+## Call rate
+
+# To filter by call rate, we remove individuals that are missing genotype data across
+# more than a pre-defined percentage of the typed SNPs. This proportion of missingness
+# across SNPs is the sample call rate and we apply a threshold of 95%, meaning that we
+# drop those individuals missing genotype data for more than 95% of the typed SNPs. A
+# new reduced dimesion SnpMatrix gentotype is created from this filter.
+
+# Recalculate SNP summary statistics
+snpsum.col <- col.summary(genotype)
+
+# SNP call rate threshold
+call.thresh <- 0.95
+
+# Identify variants passing call rate QC
+keep.call <- with(
+  snpsum.col,
+  !is.na(Call.rate) & Call.rate >= call.thresh
+)
+
+keep.call[is.na(keep.call)] <- FALSE
+
+# Extract low-quality SNPs
+low_call_snps <- rownames(snpsum.col)[!keep.call]
+
+cat(
+  length(low_call_snps),
+  "SNPs flagged for low call rate (<95%)\n"
+)
+
 # Minor allele frequency
 # Inadequate power to infer a statiscally significant relationship between
 # the SNP and the trait under study is the result of a large degree of
@@ -137,7 +168,7 @@ snpsum.col <- snpsum.col[keep.minor,]
 # Now that all the data is read into R, we need to save the objects for the
 # rest of the labs running the following command:
 
-save(genotype,genoMap,snpsum.col,genoMap,bedFile,bimFile,famFile, clinical, maf_plot, file= "project1_save.RData")
+save(genotype,genoMap,snpsum.col,genoMap,bedFile,bimFile,famFile, clinical, maf_plot, low_call_snps, file= "project1_save.RData")
 
 #### PART 2 ====================================================================
 
@@ -731,7 +762,7 @@ closefn.gds(genofile)
 
 #save the processing in this step for the next lab
 #write.csv(pctab, file = "pctab.csv", row.names = FALSE)
-save(genotype,genoMap,snpsum.col, snpsum.row, genofile, clinical, pcs, Distribution_of_Heterozygosity, hwe_plot, callrate_plot, ibd_plot, pca_plot, pvar_plot, pca_3d, file= "project2_save.RData")
+save(genotype,genoMap,snpsum.col, snpsum.row, genofile, clinical, pcs, Distribution_of_Heterozygosity, hwe_plot, callrate_plot, ibd_plot, pca_plot, pvar_plot, pca_3d, low_call_snps, file= "project2_save.RData")
 
 # PART 3 =======================================================================
 
@@ -1002,6 +1033,13 @@ if(!skip_gwas){
 } else {
   cat("Using GWAS previous results\n")
 }
+
+gwas <- gwas[!(gwas$SNP %in% low_call_snps), ]
+
+cat(
+  nrow(gwas),
+  "GWAS SNPs retained after post-hoc SNP call rate filtering\n"
+)
 
 gwasAnnotation<- gwas %>% left_join(genoMap, by = "SNP") #Annotate variant information for any SNP that exists in the gwas output. left_join annotates any SNP in the gwas data.frame with information from genoMap. right_join annotates any SNP in the genoMap data.frame with information from gwas. #note that base R 'merge' threw an error that the vectors in the merge were too long, which they shouldn't be, but this works as expected
 colnames(gwasAnnotation)[colnames(gwasAnnotation) == "chr"] <- "CHR"
